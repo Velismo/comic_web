@@ -31,7 +31,10 @@ p {
 .btn {
     display: inline-block;
     text-decoration: none;
-    padding: .5em 1.25em;
-    background: blue;
     color: white;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: .5em 1.25em;
+    background: blue;    
 }
