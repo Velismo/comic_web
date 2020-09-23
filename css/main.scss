@@ -36,7 +36,7 @@ section {
 
 .split {
     display: flex;
-    gap: 2em;
+    gap: 1em;
     flex-wrap: wrap;
     justify-content: center;
 
@@ -111,10 +111,97 @@ section {
         position: relative;
         transform: scale(.85);
         transition: transform 250ms ease-in-out;
+        text-decoration: none;
+        color: #333;
+        text-align: center;
 
         &:hover,
         &:focus {
             transform: scale(1);
+
+            .featured__details {
+                opacity: 1;
+                text-shadow: 0 0 .25em rgba(#fff, 1);
+            }
+        }
+    &::after {  
+        content: '';
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        padding: 100% 100% 0 0;
+        background: #2193b0;
+        border-radius: 50%;
+        z-index: -1;
         }
     }
+
+    &__details {
+        opacity: 0;
+        transition: opacity 250ms linear;
+
+        span {
+            display: block;
+            font-weight: 700;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.product {
+    background: radial-gradient(var(--clr-inner, limegreen), var(--clr-outer, purple));
+    padding: 3em 0;
+    border-radius: 3em;
+    margin-bottom: 3em;
+    text-align: center;
+
+    &__title {
+        font-size: 4rem;
+        text-transform: uppercase;
+        line-height: 1;
+        color: #fff;
+        text-shadow: 0 0 .2em rgba(#000, 2);
+    }
+
+    &__image {
+        margin: -5em 0 0 0;        
+    }
+
+    @media (min-width: 45em){
+        text-align: left;
+
+        &__title {
+            margin: 0;
+        }
+
+        &__image {
+            float: right;
+            width: 65%;
+            shape-outside: url(../img/comic-4.png);
+            shape-margin: 1em;
+            margin: 0 -5em 0 0;
+        }
+    }
+}
+
+.hero {
+    --clr-accent: #a1173c;
+}
+
+.invincible {
+    --clr-inner: black;
+    --clr-outer: darkblue;
+    --clr-accent: yellow;
+}
+
+.superman {
+    --clr-inner: red;
+    --clr-outer: blue;
+    --clr-accent: yellow;
+}
+
+.hulk {
+    --clr-inner: purple;
+    --clr-outer: green;
+    --clr-accent: black;
 }
