@@ -104,47 +104,48 @@ section {
 
 .featured {
     background: #eee;
-    &__item {
-        display: block;
-        position: relative;
-        transform: scale(.85);
-        transition: transform 250ms ease-in-out;
-        text-decoration: none;
-        color: #333;
-        text-align: center;
+}
+.featured__item {
+    display: block;
+    position: relative;
+    transform: scale(.85);
+    transition: transform 250ms ease-in-out;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+}
+.featured__item:hover,
+.featured__item:focus {
+    transform: scale(1);
 
-        &:hover,
-        &:focus {
-            transform: scale(1);
-
-            .featured__details {
-                opacity: 1;
-                text-shadow: 0 0 .25em rgba(#fff, 1);
-            }
-        }
-    &::after {  
-        content: '';
-        position: absolute;
-        top: 10%;
-        left: 10%;
-        padding: 100% 100% 0 0;
-        background: #2193b0;
-        border-radius: 50%;
-        z-index: -1;
-        }
-    }
-
-    &__details {
-        opacity: 0;
-        transition: opacity 250ms linear;
-
-        span {
-            display: block;
-            font-weight: 700;
-            font-size: 2.5rem;
-        }
+    .featured__details {
+        opacity: 1;
+        text-shadow: 0 0 .25em rgba(#fff, 1);
     }
 }
+
+.featured__item::after {  
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    padding: 100% 100% 10em 0;
+    background: #2193b0;
+    border-radius: 2%;
+    z-index: -1;
+}
+
+.featured__details {
+    opacity: 0;
+    transition: opacity 250ms linear;
+
+    span {
+        display: block;
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+}
+
 
 .product {
     background: radial-gradient(var(--clr-inner, limegreen), var(--clr-outer, purple));
@@ -152,18 +153,20 @@ section {
     border-radius: 3em;
     margin-bottom: 3em;
     text-align: center;
+}
 
-    &__title {
-        font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
-        text-transform: uppercase;
-        line-height: 1;
-        color: #fff;
-        text-shadow: 0 0 .2em rgba(#000, 2);
-    }
+.product__title {
+    font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
+    text-transform: uppercase;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 0 .2em rgba(#000, 2);
+}
 
-    &__image {
-        margin: -5em 0 0 0;        
-    }
+.product__image {
+    margin: -5em 0 0 0;
+    align-self: center;        
+}
 
     @media (min-width: 45em){
         text-align: left;
@@ -199,13 +202,13 @@ section {
 .invincible {
     --clr-inner: rgba(18, 18, 88, 0.842);
     --clr-outer: rgb(13, 13, 245);
-    --clr-accent: yellow;
+    --clr-accent: rgb(216, 216, 33);
 }
 
 .superman {
     --clr-inner: #e94545;
     --clr-outer: #c22323;
-    --clr-accent: yellow;
+    --clr-accent: rgb(243, 243, 67);
 }
 
 .hulk {
