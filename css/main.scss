@@ -68,17 +68,23 @@ section {
         background-repeat: no-repeat;    
 }
 
+.btn:hover,
+.btn:focus {
+    transform: scale(1.1);
+    opacity: .9;
+}
+
 .primary-title {
     font-size: 4rem;
-    font-size: clamp(3rem, calc(5vw + 1rem, 4.5rem));
-    line-height: 1.1;
+    font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+    line-height: 1;
     text-transform: uppercase;    
 }
 
 .section-title {
     text-align: center;
     font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
-    line-height: 1.1;
+    line-height: 1;
     color: #17353d;
     margin-bottom: 5rem;
 }
@@ -94,14 +100,6 @@ section {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
-    @supports (background-blend-mode: multiply) {
-        background: url(../img/comic-2.png),
-        radial-gradient(#444, #111);
-        background-blend-mode: multiply;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
 }
 
 .featured {
@@ -199,19 +197,19 @@ section {
 }
 
 .invincible {
-    --clr-inner: black;
-    --clr-outer: darkblue;
+    --clr-inner: rgba(18, 18, 88, 0.842);
+    --clr-outer: rgb(13, 13, 245);
     --clr-accent: yellow;
 }
 
 .superman {
-    --clr-inner: red;
-    --clr-outer: blue;
+    --clr-inner: #e94545;
+    --clr-outer: #c22323;
     --clr-accent: yellow;
 }
 
 .hulk {
-    --clr-inner: purple;
+    --clr-inner: lightgreen;
     --clr-outer: green;
-    --clr-accent: black;
+    --clr-accent: purple;
 }
