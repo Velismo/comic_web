@@ -156,7 +156,7 @@ section {
     text-align: center;
 
     &__title {
-        font-size: 4rem;
+        font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
         text-transform: uppercase;
         line-height: 1;
         color: #fff;
@@ -169,6 +169,7 @@ section {
 
     @media (min-width: 45em){
         text-align: left;
+        margin-bottom: 9em;
 
         &__title {
             margin: 0;
@@ -180,6 +181,15 @@ section {
             shape-outside: url(../img/comic-4.png);
             shape-margin: 1em;
             margin: 0 -5em 0 0;
+        }
+
+        &.comic-left {
+            .product__image {
+                float:left;
+                shape-outside: url(../img/comic-5.png);
+                margin: 0 0 0 -5em;
+                shape-margin: 2em;
+            }
         }
     }
 }
